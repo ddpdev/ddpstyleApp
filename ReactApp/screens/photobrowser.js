@@ -16,7 +16,7 @@ import {
     Platform,
 } from 'react-native';
 
-import PhotoBrowser from 'react-native-photo-browser';
+import MyPhotoBrowser from 'react-native-photo-browser';
 
 const EXAMPLES = [
   {
@@ -37,7 +37,7 @@ const EXAMPLES = [
       selected: true,
       caption: 'Grotto of the Madonna',
     }, {
-      photo: require('./media/broadchurch_thumbnail.png'),
+      photo: require('../../media/broadchurch_thumbnail.png'),
       caption: 'Broadchurch Scene',
     }, {
       photo: 'http://farm3.static.flickr.com/2449/4052876281_6e068ac860_b.jpg',
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
 });
 
 /* Export Component ==================================================================== */
-module.exports = PhotoBrowser;
+module.exports = MyPhotoBrowser;
 module.exports.details = {
-  title: 'PhotoBrowser'
+  title: 'MyPhotoBrowser'
 };

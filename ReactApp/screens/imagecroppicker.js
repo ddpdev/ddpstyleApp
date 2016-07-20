@@ -8,6 +8,7 @@ import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react
 
 import {NativeModules} from 'react-native';
 var ImagePicker = NativeModules.ImageCropPicker;
+//import ImagePicker from 'react-native-image-crop-picker';
 
 const styles = StyleSheet.create({
   container: {

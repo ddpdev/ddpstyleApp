@@ -131,7 +131,7 @@ dependencies {
     compile "com.facebook.react:react-native:+"         // From node_modules
     compile project(':react-native-vector-icons')       // Icon module
     compile project(':react-native-camera')             // camera module from github@
-    compile project(':react-native-image-crop-picker')  // image crop picker
+    //compile project(':react-native-image-crop-picker')  // image crop picker
 
 }
 
