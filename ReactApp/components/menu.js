@@ -27,7 +27,8 @@ import ListViewExample from '../screens/listview'
 import Camera from '../screens/mycamera'
 import Soon2 from '../screens/soon2'
 import PhotoBrowser from '../screens/photobrowser'
-import ImageCropPicker from '../screens/imagecroppicker'
+//import ImageCropPicker from '../screens/imagecroppicker'
+import ImagePicker from '../screens/imagepicker'
 
 /* Component ==================================================================== */
 class Menu extends Component {
@@ -45,7 +46,7 @@ class Menu extends Component {
         {title: '테스트-화면', component: Soon2},
         {title: 'My Camera', component: Camera},
         {title: 'Photo Browser', component: PhotoBrowser},
-        {title: 'Image Crop Picker', component: ImageCropPicker},
+        {title: 'Image Picker', component: ImagePicker},
       ],
     };
   }

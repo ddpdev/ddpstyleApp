@@ -33,6 +33,7 @@
 		FA7B8FFE347A4E18B1A99484 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAAEDD16DC284395BF699F8D /* Zocial.ttf */; };
 		B335ED3618284773B52C66D7 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5171BA95099F43E4A98AC53B /* libRCTCamera.a */; };
 		E37591269DD6412BA916E25C /* libios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96668CED3AC4AEFAD92C87A /* libios.a */; };
+		DD4CC9FBFCEC4AC7966F5997 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66406B237F134562A3C78BF1 /* libRNImagePicker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,8 @@
 		5171BA95099F43E4A98AC53B /* libRCTCamera.a */ = {isa = PBXFileReference; name = "libRCTCamera.a"; path = "libRCTCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		3549523B86DD422CA2DD61FC /* ios.xcodeproj */ = {isa = PBXFileReference; name = "ios.xcodeproj"; path = "../node_modules/react-native-image-crop-picker/ios/ios.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		D96668CED3AC4AEFAD92C87A /* libios.a */ = {isa = PBXFileReference; name = "libios.a"; path = "libios.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		757CDAAF84664380B0871987 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; name = "RNImagePicker.xcodeproj"; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		66406B237F134562A3C78BF1 /* libRNImagePicker.a */ = {isa = PBXFileReference; name = "libRNImagePicker.a"; path = "libRNImagePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,7 @@
 				BDE93FFD03064634977C8E71 /* libRNVectorIcons.a in Frameworks */,
 				B335ED3618284773B52C66D7 /* libRCTCamera.a in Frameworks */,
 				E37591269DD6412BA916E25C /* libios.a in Frameworks */,
+				DD4CC9FBFCEC4AC7966F5997 /* libRNImagePicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +331,7 @@
 				30FC01F6DCEE4E61BF42A7E5 /* RNVectorIcons.xcodeproj */,
 				12A684FD6F1B4BF898CF0FD6 /* RCTCamera.xcodeproj */,
 				3549523B86DD422CA2DD61FC /* ios.xcodeproj */,
+				757CDAAF84664380B0871987 /* RNImagePicker.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DdpApp10.app/DdpApp10";
@@ -686,6 +692,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -707,6 +714,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios/**",
 				);
 				INFOPLIST_FILE = DdpApp10/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -730,6 +738,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios/**",
 				);
 				INFOPLIST_FILE = DdpApp10/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -783,6 +792,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -826,6 +836,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-image-crop-picker\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;

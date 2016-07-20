@@ -28,8 +28,15 @@ const styles = StyleSheet.create({
 
 class ImageCropPicker extends Component {
 
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     image: null,
+  //     images: null
+  //   };
+  // }
+  constructor() {
+    super();
     this.state = {
       image: null,
       images: null

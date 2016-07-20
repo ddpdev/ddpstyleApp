@@ -6,7 +6,10 @@ import com.facebook.react.shell.MainReactPackage;
 
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
-//import com.reactnative.picker.PickerPackage;
+import com.imagepicker.ImagePickerPackage;
+
+//import com.reactnative.picker.PickerPackage; //에러남. Why?
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,6 +42,7 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new ImagePickerPackage(),
             //new PickerPackage(),
             new RCTCameraPackage(),
             new VectorIconsPackage()
