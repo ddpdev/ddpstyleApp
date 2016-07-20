@@ -25,6 +25,11 @@ import Button from '../components/button'
 // Screens
 import FirstLoad from './first.load'
 
+// Icon
+import Icon from 'react-native-vector-icons/Ionicons';
+import FaIcon from 'react-native-vector-icons/FontAwesome';
+
+
 /* Component ==================================================================== */
 class ComingSoon extends Component {
   constructor(props) {
@@ -71,7 +76,12 @@ class ComingSoon extends Component {
         <Text style={[AppStyles.baseText, AppStyles.p]}>
           {text}
         </Text>
-
+        <Text style={AppStyles.baseText} >
+          화면 테스트 - Ionicons <Icon name="ios-camera" size={24} color="#4F8EF7" />
+        </Text>
+        <Text style={AppStyles.baseText} >
+          화면 테스트 - FontAwesome <FaIcon name="camera" size={30} color="#4F8EF7" />
+        </Text>
         <View style={[AppStyles.spacer_10]} />
 
         <Button type={'outlined'}

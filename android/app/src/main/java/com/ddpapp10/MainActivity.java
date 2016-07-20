@@ -1,8 +1,9 @@
 package com.ddpapp10;
 
 import com.facebook.react.ReactActivity;
-import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import com.reactnative.imagepicker.PickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 
@@ -37,6 +38,7 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new PickerPackage(),
             new RCTCameraPackage(),
             new VectorIconsPackage()
         );
