@@ -1,4 +1,4 @@
-package com.ddpapp03;
+package com.ddpapp10;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "ddpapp03";
+        return "ddpapp10";
     }
 }
