@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-class ddpapp03 extends Component {
+class ddpapp10 extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('ddpapp03', () => ddpapp03);
+AppRegistry.registerComponent('ddpapp10', () => ddpapp03);
