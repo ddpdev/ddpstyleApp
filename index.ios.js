@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('ddpapp10', () => ddpapp03);
+AppRegistry.registerComponent('ddpapp10', () => ddpapp10);

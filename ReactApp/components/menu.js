@@ -25,10 +25,11 @@ import ComingSoon from '../screens/soon'
 import FormExample from '../screens/forms'
 import ListViewExample from '../screens/listview'
 import Camera from '../screens/mycamera'
-import Soon2 from '../screens/soon2'
-import PhotoBrowser from '../screens/photobrowser'
+//import Soon2 from '../screens/soon2'
+//import PhotoBrowser from '../screens/photobrowser'
 //import ImageCropPicker from '../screens/imagecroppicker'
 import ImagePicker from '../screens/imagepicker'
+import ItemListView from '../screens/itemlistview'
 
 /* Component ==================================================================== */
 class Menu extends Component {
@@ -39,14 +40,16 @@ class Menu extends Component {
     this.state = {
       menu: [
         {title: 'Home', component: ComingSoon, props: {passProps: {placeholder: '신기하고 재밌는 React-Native~~~'}}},
-        {title: 'Style Guide', component: StyleGuide},
-        {title: 'Forms', component: FormExample},
-        {title: 'List Example', component: ListViewExample, props: {noImages: true}},
-        {title: 'List Example 2', component: ListViewExample},
-        {title: '테스트-화면', component: Soon2},
+        {title: 'Text List', component: ListViewExample, props: {noImages: true}},
+        {title: 'Image List', component: ListViewExample},
+        {title: 'Item List', component: ItemListView},
+        {title: 'ImagePicker', component: ImagePicker},
         {title: 'My Camera', component: Camera},
-        {title: 'Photo Browser', component: PhotoBrowser},
-        {title: 'Image Picker', component: ImagePicker},
+        {title: 'Forms', component: FormExample},
+        {title: 'Style Guide', component: StyleGuide},
+        /*{title: 'ImageCropPicker', component: ImageCropPicker},*/
+        /*{title: '테스트-화면', component: Soon2},*/
+        /*{title: 'Photo Browser', component: PhotoBrowser},*/
       ],
     };
   }
