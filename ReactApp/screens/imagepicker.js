@@ -26,12 +26,13 @@ export default class MyImagePicker extends React.Component {
     //   image: null,
     //   images: null
     // };
+    this.state = {
+      avatarSource: null,
+      videoSource: null
+    };
   }
 
-  state = {
-    avatarSource: null,
-    videoSource: null
-  };
+
 
   selectPhotoTapped() {
     const options = {

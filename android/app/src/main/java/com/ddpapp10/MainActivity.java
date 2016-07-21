@@ -5,11 +5,10 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.lwansbrough.RCTCamera.RCTCameraPackage;
-import com.imagepicker.ImagePickerPackage;
+//import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import com.imagepicker.ImagePickerPackage;     // image picker
 
-//import com.reactnative.picker.PickerPackage; //에러남. Why?
-
+//import com.reactnative.picker.PickerPackage; // image crop picker
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,13 +37,14 @@ public class MainActivity extends ReactActivity {
      * A list of packages used by the app. If the app uses additional views
      * or modules besides the default ones, add more packages here.
      */
+
     @Override
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
-            new ImagePickerPackage(),
             //new PickerPackage(),
-            new RCTCameraPackage(),
+            new ImagePickerPackage(),
+            //new RCTCameraPackage(),
             new VectorIconsPackage()
         );
     }
