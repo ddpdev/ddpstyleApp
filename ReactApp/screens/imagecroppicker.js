@@ -6,9 +6,9 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native';
 
-import {NativeModules} from 'react-native';
-var ImagePicker = NativeModules.ImageCropPicker;
-//import ImagePicker from 'react-native-image-crop-picker';
+// import {NativeModules} from 'react-native';
+// var ImagePicker = NativeModules.ImageCropPicker;
+import ImageCropPicker from 'react-native-image-crop-picker';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class ImageCropPicker extends Component {
+class MyImageCropPicker extends Component {
 
   // constructor(props) {
   //   super(props);
@@ -44,7 +44,7 @@ class ImageCropPicker extends Component {
   }
 
   pickSingle(cropit) {
-    ImagePicker.openPicker({
+    ImageCropPicker.openPicker({
       width: 300,
       height: 300,
       cropping: cropit
@@ -58,7 +58,7 @@ class ImageCropPicker extends Component {
   }
 
   pickMultiple() {
-    ImagePicker.openPicker({
+    ImageCropPicker.openPicker({
       multiple: true
     }).then(images => {
       this.setState({
@@ -97,7 +97,7 @@ class ImageCropPicker extends Component {
 }
 
 /* Export Component ==================================================================== */
-module.exports = ImageCropPicker;
+module.exports = MyImageCropPicker;
 module.exports.details = {
   title: 'ImageCropPicker'
 };

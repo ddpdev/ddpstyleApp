@@ -31,6 +31,7 @@ import AppUtil from '../util';
 // Components
 import Menu from '../components/menu';
 import NavbarElements from '../components/navbar.elements';
+import TabBar from '../components/navigation/MainTab';
 
 // Screens
 import Index from '../screens/soon.js';
@@ -93,16 +94,16 @@ class AppContainer extends Component {
     console.log(route);
 
     return (
-      <View style={[AppStyles.appContainer, AppStyles.container]}>
-        <NavigationBar
-          title={<NavbarElements.Title title={route.title || null} />}
-          statusBar={{style: 'light-content', hidden: false}}
-          style={[AppStyles.navbar]}
-          tintColor={AppConfig.primaryColor}
-          leftButton={<NavbarElements.LeftButton onPress={leftButton.onPress} icon={leftButton.icon} />} />
-
-        <route.component navigator={navigator} route={route} {...route.passProps} />
-      </View>
+        <View style={[AppStyles.appContainer, AppStyles.container]}>
+          <NavigationBar
+            title={<NavbarElements.Title title={route.title || null} />}
+            statusBar={{style: 'light-content', hidden: false}}
+            style={[AppStyles.navbar]}
+            tintColor={AppConfig.primaryColor}
+            leftButton={<NavbarElements.LeftButton onPress={leftButton.onPress} icon={leftButton.icon} />} />
+          <TabBar />
+          <route.component navigator={navigator} route={route} {...route.passProps} />
+        </View>
     );
   }
 
