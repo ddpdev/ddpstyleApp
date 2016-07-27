@@ -76,12 +76,6 @@ class ComingSoon extends Component {
         <Text style={[AppStyles.baseText, AppStyles.p]}>
           {text}
         </Text>
-        <Text style={AppStyles.h3} >
-          Ionicons 유형 <Icon name="ios-camera" size={30} color="#4F8EF7" />
-        </Text>
-        <Text style={AppStyles.h3} >
-          FontAwesome 유형 <FaIcon name="camera" size={30} color="#4F8EF7" />
-        </Text>
 
         <View style={[AppStyles.spacer_10]} />
 

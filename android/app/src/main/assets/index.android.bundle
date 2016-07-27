@@ -77829,7 +77829,7 @@ var _reduxThunk=require(654 /* redux-thunk */);var _reduxThunk2=babelHelpers.int
 var _app=require(655 /* ./app */);var _app2=babelHelpers.interopRequireDefault(_app);
 
 
-var _index=require(886 /* ../reducers/index */);var _index2=babelHelpers.interopRequireDefault(_index);
+var _index=require(888 /* ../reducers/index */);var _index2=babelHelpers.interopRequireDefault(_index);
 
 
 var middleware=[_reduxThunk2.default];
@@ -79730,8 +79730,8 @@ var _util=require(664 /* ../util */);var _util2=babelHelpers.interopRequireDefau
 
 
 var _menu=require(665 /* ../components/menu */);var _menu2=babelHelpers.interopRequireDefault(_menu);
-var _navbar=require(876 /* ../components/navbar.elements */);var _navbar2=babelHelpers.interopRequireDefault(_navbar);
-var _MainTab=require(877 /* ../components/navigation/MainTab */);var _MainTab2=babelHelpers.interopRequireDefault(_MainTab);
+var _navbar=require(878 /* ../components/navbar.elements */);var _navbar2=babelHelpers.interopRequireDefault(_navbar);
+var _MainTab=require(879 /* ../components/navigation/MainTab */);var _MainTab2=babelHelpers.interopRequireDefault(_MainTab);
 
 
 var _soon=require(670 /* ../screens/soon.js */);var _soon2=babelHelpers.interopRequireDefault(_soon);var
@@ -80761,15 +80761,19 @@ var _soon=require(670 /* ../screens/soon */);var _soon2=babelHelpers.interopRequ
 var _forms=require(788 /* ../screens/forms */);var _forms2=babelHelpers.interopRequireDefault(_forms);
 var _listview=require(867 /* ../screens/listview */);var _listview2=babelHelpers.interopRequireDefault(_listview);
 var _mycamera=require(868 /* ../screens/mycamera */);var _mycamera2=babelHelpers.interopRequireDefault(_mycamera);
+var _mywebview=require(870 /* ../screens/mywebview */);var _mywebview2=babelHelpers.interopRequireDefault(_mywebview);
+var _myuploadwebview=require(871 /* ../screens/myuploadwebview */);var _myuploadwebview2=babelHelpers.interopRequireDefault(_myuploadwebview);
 
 
 
-var _imagepicker=require(870 /* ../screens/imagepicker */);var _imagepicker2=babelHelpers.interopRequireDefault(_imagepicker);
-var _itemlistview=require(872 /* ../screens/itemlistview */);var _itemlistview2=babelHelpers.interopRequireDefault(_itemlistview);var
+var _imagepicker=require(872 /* ../screens/imagepicker */);var _imagepicker2=babelHelpers.interopRequireDefault(_imagepicker);
+var _itemlistview=require(874 /* ../screens/itemlistview */);var _itemlistview2=babelHelpers.interopRequireDefault(_itemlistview);var
 
 
 Menu=function(_Component){babelHelpers.inherits(Menu,_Component);
 function Menu(){babelHelpers.classCallCheck(this,Menu);var _this=babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(Menu).call(this));_this.
+
+
 
 
 
@@ -80821,7 +80825,7 @@ _react2.default.createElement(_reactNative.View,{style:[styles.menuContainer]},
 _react2.default.createElement(_reactNative.View,{style:[styles.menu]},menuItems)));
 
 
-};_this.state={menu:[{title:'Home',component:_soon2.default,props:{passProps:{placeholder:'신기하고 재밌는 React-Native~~~'}}},{title:'Text List',component:_listview2.default,props:{noImages:true}},{title:'Image List',component:_listview2.default},{title:'Item List',component:_itemlistview2.default},{title:'ImagePicker',component:_imagepicker2.default},{title:'My Camera',component:_mycamera2.default},{title:'Forms',component:_forms2.default},{title:'Style Guide',component:_style2.default}]};return _this;}return Menu;}(_react.Component);Menu.propTypes={navigate:_react2.default.PropTypes.func.isRequired};
+};_this.state={menu:[{title:'Home',component:_soon2.default,props:{passProps:{placeholder:'신기하고 재밌는 React-Native~~~'}}},{title:'Text List',component:_listview2.default,props:{noImages:true}},{title:'Image List',component:_listview2.default},{title:'Item List',component:_itemlistview2.default},{title:'WebView-Thumb',component:_mywebview2.default},{title:'WebView-Upload',component:_myuploadwebview2.default},{title:'ImagePicker',component:_imagepicker2.default},{title:'My Camera',component:_mycamera2.default},{title:'Forms',component:_forms2.default},{title:'Style Guide',component:_style2.default}]};return _this;}return Menu;}(_react.Component);Menu.propTypes={navigate:_react2.default.PropTypes.func.isRequired};
 
 
 
@@ -80849,8 +80853,8 @@ borderBottomColor:"#333",
 paddingBottom:10},
 
 menuItem_text:{
-fontSize:18,
-lineHeight:parseInt(18+18*0.5),
+fontSize:16,
+lineHeight:parseInt(16+16*0.5),
 fontWeight:'500',
 marginTop:10,
 flex:1,
@@ -81434,12 +81438,6 @@ return(
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.container,_styles2.default.containerCentered]},
 _react2.default.createElement(_reactNative.Text,{style:[_styles2.default.baseText,_styles2.default.p]},
 text),
-
-_react2.default.createElement(_reactNative.Text,{style:_styles2.default.h3},'Ionicons 유형 ',
-_react2.default.createElement(_Ionicons2.default,{name:'ios-camera',size:30,color:'#4F8EF7'})),
-
-_react2.default.createElement(_reactNative.Text,{style:_styles2.default.h3},'FontAwesome 유형 ',
-_react2.default.createElement(_FontAwesome2.default,{name:'camera',size:30,color:'#4F8EF7'})),
 
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.spacer_10]}),
@@ -92889,7 +92887,53 @@ var RCTCamera=(0,_reactNative.requireNativeComponent)('RCTCamera',Camera);
 var styles=_reactNative.StyleSheet.create({
 base:{}});
 }, "react-native-camera/index.js");
-__d(870 /* ddpapp10/ReactApp/screens/imagepicker.js */, function(global, require, module, exports) {
+__d(870 /* ddpapp10/ReactApp/screens/mywebview.js */, function(global, require, module, exports) {
+
+
+
+var _react=require(12 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
+var _reactNative=require(43 /* react-native */);var
+
+MyWebView=function(_Component){babelHelpers.inherits(MyWebView,_Component);function MyWebView(){babelHelpers.classCallCheck(this,MyWebView);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(MyWebView).apply(this,arguments));}babelHelpers.createClass(MyWebView,[{key:'render',value:function render()
+{
+return(
+_react2.default.createElement(_reactNative.WebView,{
+source:{uri:'http://app.ddpstyle.com/common/awsfilelist?imgType=thumb'},
+style:{marginTop:20}}));
+
+
+}}]);return MyWebView;}(_react.Component);
+
+
+
+module.exports=MyWebView;
+module.exports.details={
+title:'thumbnail web page'};
+}, "ddpapp10/ReactApp/screens/mywebview.js");
+__d(871 /* ddpapp10/ReactApp/screens/myuploadwebview.js */, function(global, require, module, exports) {
+
+
+
+var _react=require(12 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
+var _reactNative=require(43 /* react-native */);var
+
+MyUploadWebView=function(_Component){babelHelpers.inherits(MyUploadWebView,_Component);function MyUploadWebView(){babelHelpers.classCallCheck(this,MyUploadWebView);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(MyUploadWebView).apply(this,arguments));}babelHelpers.createClass(MyUploadWebView,[{key:'render',value:function render()
+{
+return(
+_react2.default.createElement(_reactNative.WebView,{
+source:{uri:'http://app.ddpstyle.com/common/awsfileupload'},
+style:{marginTop:20}}));
+
+
+}}]);return MyUploadWebView;}(_react.Component);
+
+
+
+module.exports=MyUploadWebView;
+module.exports.details={
+title:'file upload'};
+}, "ddpapp10/ReactApp/screens/myuploadwebview.js");
+__d(872 /* ddpapp10/ReactApp/screens/imagepicker.js */, function(global, require, module, exports) {
 
 
 'use strict';Object.defineProperty(exports,"__esModule",{value:true});
@@ -92906,7 +92950,7 @@ var _reactNative=require(43 /* react-native */);
 
 
 
-var _reactNativeImagePicker=require(871 /* react-native-image-picker */);var _reactNativeImagePicker2=babelHelpers.interopRequireDefault(_reactNativeImagePicker);var
+var _reactNativeImagePicker=require(873 /* react-native-image-picker */);var _reactNativeImagePicker2=babelHelpers.interopRequireDefault(_reactNativeImagePicker);var
 
 MyImagePicker=function(_React$Component){babelHelpers.inherits(MyImagePicker,_React$Component);
 
@@ -92999,21 +93043,21 @@ videoSource:response.uri});
 return(
 _react2.default.createElement(_reactNative.View,{style:styles.container},
 _react2.default.createElement(_reactNative.TouchableOpacity,{onPress:this.selectPhotoTapped.bind(this)},
-_react2.default.createElement(_reactNative.View,{style:[styles.avatar,styles.avatarContainer,{marginBottom:20}]},
+_react2.default.createElement(_reactNative.View,{style:[styles.avatar,styles.avatarContainer,{marginTop:10,marginBottom:10}]},
 this.state.avatarSource===null?_react2.default.createElement(_reactNative.Text,null,'Select a Photo'):
-_react2.default.createElement(_reactNative.Image,{style:styles.avatar,source:this.state.avatarSource}))),
+_react2.default.createElement(_reactNative.Image,{style:styles.avatar,source:this.state.avatarSource})))));
 
 
 
 
-_react2.default.createElement(_reactNative.TouchableOpacity,{onPress:this.selectVideoTapped.bind(this)},
-_react2.default.createElement(_reactNative.View,{style:[styles.avatar,styles.avatarContainer]},
-_react2.default.createElement(_reactNative.Text,null,'Select a Video'))),
 
 
 
-this.state.videoSource&&
-_react2.default.createElement(_reactNative.Text,{style:{margin:8,textAlign:'center'}},this.state.videoSource)));
+
+
+
+
+
 
 
 
@@ -93046,7 +93090,7 @@ module.exports=MyImagePicker;
 module.exports.details={
 title:'MyImagePicker'};
 }, "ddpapp10/ReactApp/screens/imagepicker.js");
-__d(871 /* react-native-image-picker/index.js */, function(global, require, module, exports) {'use strict';var _require=
+__d(873 /* react-native-image-picker/index.js */, function(global, require, module, exports) {'use strict';var _require=
 
 require(43 /* react-native */);var NativeModules=_require.NativeModules;var
 ImagePickerManager=NativeModules.ImagePickerManager;
@@ -93069,7 +93113,7 @@ options={};
 return ImagePickerManager.showImagePicker(babelHelpers.extends({},DEFAULT_OPTIONS,options),callback);
 }});
 }, "react-native-image-picker/index.js");
-__d(872 /* ddpapp10/ReactApp/screens/itemlistview.js */, function(global, require, module, exports) {
+__d(874 /* ddpapp10/ReactApp/screens/itemlistview.js */, function(global, require, module, exports) {
 
 
 
@@ -93084,8 +93128,8 @@ var React=require(12 /* react */);var _require=
 
 require(43 /* react-native */);var StyleSheet=_require.StyleSheet;var Text=_require.Text;var View=_require.View;var TouchableHighlight=_require.TouchableHighlight;var Platform=_require.Platform;
 
-var GiftedListView=require(873 /* react-native-gifted-listview */);
-var GiftedSpinner=require(875 /* react-native-gifted-spinner */);
+var GiftedListView=require(875 /* react-native-gifted-listview */);
+var GiftedSpinner=require(877 /* react-native-gifted-spinner */);
 
 var ItemListView=React.createClass({displayName:'ItemListView',
 
@@ -93404,7 +93448,7 @@ marginTop:12}};
 
 module.exports=ItemListView;
 }, "ddpapp10/ReactApp/screens/itemlistview.js");
-__d(873 /* react-native-gifted-listview/GiftedListView.js */, function(global, require, module, exports) {'use strict';
+__d(875 /* react-native-gifted-listview/GiftedListView.js */, function(global, require, module, exports) {'use strict';
 
 var React=require(12 /* react */);var _require=
 
@@ -93434,7 +93478,7 @@ obj1[p]=obj2[p];
 return obj1;
 }
 
-var GiftedSpinner=require(874 /* react-native-gifted-spinner */);
+var GiftedSpinner=require(876 /* react-native-gifted-spinner */);
 
 var GiftedListView=React.createClass({displayName:'GiftedListView',
 
@@ -93760,7 +93804,7 @@ marginBottom:15}}});
 
 module.exports=GiftedListView;
 }, "react-native-gifted-listview/GiftedListView.js");
-__d(874 /* react-native-gifted-spinner/GiftedSpinner.js */, function(global, require, module, exports) {'use strict';
+__d(876 /* react-native-gifted-spinner/GiftedSpinner.js */, function(global, require, module, exports) {'use strict';
 
 var React=require(12 /* react */);var _require=
 
@@ -93808,7 +93852,7 @@ this._getSpinner()));
 
 module.exports=GiftedSpinner;
 }, "react-native-gifted-spinner/GiftedSpinner.js");
-__d(875 /* react-native-gifted-spinner/GiftedSpinner.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react=require(12 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
+__d(877 /* react-native-gifted-spinner/GiftedSpinner.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react=require(12 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
 var _reactNative=require(43 /* react-native */);var
 
 GiftedSpinner=function(_Component){babelHelpers.inherits(GiftedSpinner,_Component);function GiftedSpinner(){babelHelpers.classCallCheck(this,GiftedSpinner);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(GiftedSpinner).apply(this,arguments));}babelHelpers.createClass(GiftedSpinner,[{key:'render',value:function render()
@@ -93822,7 +93866,7 @@ this.props)));
 
 }}]);return GiftedSpinner;}(_react.Component);exports.default=GiftedSpinner;
 }, "react-native-gifted-spinner/GiftedSpinner.js");
-__d(876 /* ddpapp10/ReactApp/components/navbar.elements.js */, function(global, require, module, exports) {
+__d(878 /* ddpapp10/ReactApp/components/navbar.elements.js */, function(global, require, module, exports) {
 
 
 
@@ -93890,7 +93934,7 @@ color:'#FFFFFF',
 bottom:6,
 fontSize:13}});
 }, "ddpapp10/ReactApp/components/navbar.elements.js");
-__d(877 /* ddpapp10/ReactApp/components/navigation/MainTab.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
+__d(879 /* ddpapp10/ReactApp/components/navigation/MainTab.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
 
 
 
@@ -93904,11 +93948,11 @@ var _reactNative=require(43 /* react-native */);
 
 var _styles=require(662 /* ../../styles */);var _styles2=babelHelpers.interopRequireDefault(_styles);
 
-var _MainTabBar=require(878 /* ./MainTabBar */);var _MainTabBar2=babelHelpers.interopRequireDefault(_MainTabBar);
+var _MainTabBar=require(880 /* ./MainTabBar */);var _MainTabBar2=babelHelpers.interopRequireDefault(_MainTabBar);
 var _Platform=require(191 /* Platform */);var _Platform2=babelHelpers.interopRequireDefault(_Platform);
 var _BackAndroid=require(480 /* BackAndroid */);var _BackAndroid2=babelHelpers.interopRequireDefault(_BackAndroid);
-var _reactNativeScrollableTabView=require(879 /* react-native-scrollable-tab-view */);var _reactNativeScrollableTabView2=babelHelpers.interopRequireDefault(_reactNativeScrollableTabView);
-var _imagepicker=require(870 /* ../../screens/imagepicker */);var _imagepicker2=babelHelpers.interopRequireDefault(_imagepicker);
+var _reactNativeScrollableTabView=require(881 /* react-native-scrollable-tab-view */);var _reactNativeScrollableTabView2=babelHelpers.interopRequireDefault(_reactNativeScrollableTabView);
+var _imagepicker=require(872 /* ../../screens/imagepicker */);var _imagepicker2=babelHelpers.interopRequireDefault(_imagepicker);
 var _mycamera=require(868 /* ../../screens/mycamera */);var _mycamera2=babelHelpers.interopRequireDefault(_mycamera);exports.default=
 
 _react2.default.createClass({displayName:'MainTab',
@@ -93962,7 +94006,7 @@ shadowOffset:{width:2,height:2},
 shadowOpacity:0.5,
 shadowRadius:3}});
 }, "ddpapp10/ReactApp/components/navigation/MainTab.js");
-__d(878 /* ddpapp10/ReactApp/components/navigation/MainTabBar.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
+__d(880 /* ddpapp10/ReactApp/components/navigation/MainTabBar.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
 
 
 
@@ -94044,7 +94088,7 @@ borderBottomColor:'rgba(0,0,0,0.05)'}});exports.default=
 
 MainTabBar;
 }, "ddpapp10/ReactApp/components/navigation/MainTabBar.js");
-__d(879 /* react-native-scrollable-tab-view/index.js */, function(global, require, module, exports) {var React=require(12 /* react */);var
+__d(881 /* react-native-scrollable-tab-view/index.js */, function(global, require, module, exports) {var React=require(12 /* react */);var
 
 PropTypes=
 
@@ -94062,9 +94106,9 @@ Dimensions=
 ReactNative.Dimensions;var View=ReactNative.View;var Animated=ReactNative.Animated;var ScrollView=ReactNative.ScrollView;var Platform=ReactNative.Platform;var StyleSheet=ReactNative.StyleSheet;var ViewPagerAndroid=ReactNative.ViewPagerAndroid;var InteractionManager=ReactNative.InteractionManager;
 var TimerMixin=require(383 /* react-timer-mixin */);
 
-var SceneComponent=require(880 /* ./SceneComponent */);
-var DefaultTabBar=require(883 /* ./DefaultTabBar */);
-var ScrollableTabBar=require(885 /* ./ScrollableTabBar */);
+var SceneComponent=require(882 /* ./SceneComponent */);
+var DefaultTabBar=require(885 /* ./DefaultTabBar */);
+var ScrollableTabBar=require(887 /* ./ScrollableTabBar */);
 
 
 var ScrollableTabView=React.createClass({displayName:'ScrollableTabView',
@@ -94349,12 +94393,12 @@ flex:1},
 scrollableContentAndroid:{
 flex:1}});
 }, "react-native-scrollable-tab-view/index.js");
-__d(880 /* react-native-scrollable-tab-view/SceneComponent.js */, function(global, require, module, exports) {var React=require(12 /* react */);
+__d(882 /* react-native-scrollable-tab-view/SceneComponent.js */, function(global, require, module, exports) {var React=require(12 /* react */);
 var ReactNative=require(43 /* react-native */);var
 Component=React.Component;var
 View=ReactNative.View;var StyleSheet=ReactNative.StyleSheet;
 
-var StaticContainer=require(881 /* react-static-container */);
+var StaticContainer=require(883 /* react-static-container */);
 
 var SceneComponent=function SceneComponent(Props){var
 shouldUpdated=Props.shouldUpdated;var props=babelHelpers.objectWithoutProperties(Props,['shouldUpdated']);
@@ -94367,7 +94411,7 @@ props.children));
 
 module.exports=SceneComponent;
 }, "react-native-scrollable-tab-view/SceneComponent.js");
-__d(881 /* react-static-container/index.js */, function(global, require, module, exports) {
+__d(883 /* react-static-container/index.js */, function(global, require, module, exports) {
 
 
 
@@ -94376,9 +94420,9 @@ __d(881 /* react-static-container/index.js */, function(global, require, module,
 
 
 
-module.exports=require(882 /* ./lib/StaticContainer.react */);
+module.exports=require(884 /* ./lib/StaticContainer.react */);
 }, "react-static-container/index.js");
-__d(882 /* react-static-container/lib/StaticContainer.react.js */, function(global, require, module, exports) {
+__d(884 /* react-static-container/lib/StaticContainer.react.js */, function(global, require, module, exports) {
 
 
 
@@ -94449,7 +94493,7 @@ return StaticContainer;
 
 module.exports=StaticContainer;
 }, "react-static-container/lib/StaticContainer.react.js");
-__d(883 /* react-native-scrollable-tab-view/DefaultTabBar.js */, function(global, require, module, exports) {var React=require(12 /* react */);
+__d(885 /* react-native-scrollable-tab-view/DefaultTabBar.js */, function(global, require, module, exports) {var React=require(12 /* react */);
 var ReactNative=require(43 /* react-native */);var
 
 StyleSheet=
@@ -94457,7 +94501,7 @@ StyleSheet=
 
 
 ReactNative.StyleSheet;var Text=ReactNative.Text;var View=ReactNative.View;var Animated=ReactNative.Animated;
-var Button=require(884 /* ./Button */);
+var Button=require(886 /* ./Button */);
 
 var DefaultTabBar=React.createClass({displayName:'DefaultTabBar',
 propTypes:{
@@ -94550,7 +94594,7 @@ borderBottomColor:'#ccc'}});
 
 module.exports=DefaultTabBar;
 }, "react-native-scrollable-tab-view/DefaultTabBar.js");
-__d(884 /* react-native-scrollable-tab-view/Button.android.js */, function(global, require, module, exports) {var React=require(12 /* react */);
+__d(886 /* react-native-scrollable-tab-view/Button.android.js */, function(global, require, module, exports) {var React=require(12 /* react */);
 var ReactNative=require(43 /* react-native */);var
 
 TouchableNativeFeedback=
@@ -94569,7 +94613,7 @@ props.children);
 
 module.exports=Button;
 }, "react-native-scrollable-tab-view/Button.android.js");
-__d(885 /* react-native-scrollable-tab-view/ScrollableTabBar.js */, function(global, require, module, exports) {var React=require(12 /* react */);
+__d(887 /* react-native-scrollable-tab-view/ScrollableTabBar.js */, function(global, require, module, exports) {var React=require(12 /* react */);
 var ReactNative=require(43 /* react-native */);var
 
 View=
@@ -94580,7 +94624,7 @@ View=
 
 
 ReactNative.View;var Animated=ReactNative.Animated;var StyleSheet=ReactNative.StyleSheet;var ScrollView=ReactNative.ScrollView;var Text=ReactNative.Text;var Platform=ReactNative.Platform;var Dimensions=ReactNative.Dimensions;
-var Button=require(884 /* ./Button */);
+var Button=require(886 /* ./Button */);
 
 var WINDOW_WIDTH=Dimensions.get('window').width;
 
@@ -94796,7 +94840,7 @@ tabs:{
 flexDirection:'row',
 justifyContent:'space-around'}});
 }, "react-native-scrollable-tab-view/ScrollableTabBar.js");
-__d(886 /* ddpapp10/ReactApp/reducers/index.js */, function(global, require, module, exports) {
+__d(888 /* ddpapp10/ReactApp/reducers/index.js */, function(global, require, module, exports) {
 
 
 
@@ -94808,7 +94852,7 @@ var _redux=require(627 /* redux */);
 
 
 
-var _sidemenu=require(887 /* ./sidemenu */);var _sidemenu2=babelHelpers.interopRequireDefault(_sidemenu);
+var _sidemenu=require(889 /* ./sidemenu */);var _sidemenu2=babelHelpers.interopRequireDefault(_sidemenu);
 
 
 var appReducer=(0,_redux.combineReducers)({
@@ -94826,7 +94870,7 @@ return appReducer(state,action);
 
 rootReducer;
 }, "ddpapp10/ReactApp/reducers/index.js");
-__d(887 /* ddpapp10/ReactApp/reducers/sidemenu.js */, function(global, require, module, exports) {
+__d(889 /* ddpapp10/ReactApp/reducers/sidemenu.js */, function(global, require, module, exports) {
 
 
 

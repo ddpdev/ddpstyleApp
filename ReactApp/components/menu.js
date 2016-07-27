@@ -25,6 +25,8 @@ import ComingSoon from '../screens/soon'
 import FormExample from '../screens/forms'
 import ListViewExample from '../screens/listview'
 import Camera from '../screens/mycamera'
+import MyWebView from '../screens/mywebview'
+import MyUploadWebView from '../screens/myuploadwebview'
 //import Soon2 from '../screens/soon2'
 //import PhotoBrowser from '../screens/photobrowser'
 //import ImageCropPicker from '../screens/imagecroppicker'
@@ -43,6 +45,8 @@ class Menu extends Component {
         {title: 'Text List', component: ListViewExample, props: {noImages: true}},
         {title: 'Image List', component: ListViewExample},
         {title: 'Item List', component: ItemListView},
+        {title: 'WebView-Thumb', component: MyWebView},
+        {title: 'WebView-Upload', component: MyUploadWebView},
         {title: 'ImagePicker', component: ImagePicker},
         {title: 'My Camera', component: Camera},
         {title: 'Forms', component: FormExample},
@@ -101,7 +105,7 @@ const styles = StyleSheet.create({
     flex: 1,
     left: 0,
     right: 0,
-    height: AppConfig.windowHeight,
+    height: AppConfig.windowHeight ,
     backgroundColor: "#111111",
     padding: 20,
     paddingTop: AppConfig.statusBarHeight,
@@ -113,8 +117,8 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   menuItem_text: {
-    fontSize: 18,
-    lineHeight: parseInt(18 + (18 * 0.5)),
+    fontSize: 16,
+    lineHeight: parseInt(16 + (16 * 0.5)),
     fontWeight: '500',
     marginTop: 10,
     flex: 1,

@@ -108,22 +108,22 @@ export default class MyImagePicker extends React.Component {
     return (
         <View style={styles.container}>
           <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
-            <View style={[styles.avatar, styles.avatarContainer, {marginBottom: 20}]}>
+            <View style={[styles.avatar, styles.avatarContainer, {marginTop: 10, marginBottom: 10}]}>
               { this.state.avatarSource === null ? <Text>Select a Photo</Text> :
                   <Image style={styles.avatar} source={this.state.avatarSource} />
               }
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={this.selectVideoTapped.bind(this)}>
-            <View style={[styles.avatar, styles.avatarContainer]}>
-              <Text>Select a Video</Text>
-            </View>
-          </TouchableOpacity>
+          {/*<TouchableOpacity onPress={this.selectVideoTapped.bind(this)}>*/}
+            {/*<View style={[styles.avatar, styles.avatarContainer]}>*/}
+              {/*<Text>Select a Video</Text>*/}
+            {/*</View>*/}
+          {/*</TouchableOpacity>*/}
 
-          { this.state.videoSource &&
-          <Text style={{margin: 8, textAlign: 'center'}}>{this.state.videoSource}</Text>
-          }
+          {/*{ this.state.videoSource &&*/}
+          {/*<Text style={{margin: 8, textAlign: 'center'}}>{this.state.videoSource}</Text>*/}
+          {/*}*/}
         </View>
     );
   }
