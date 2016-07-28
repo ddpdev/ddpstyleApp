@@ -17,7 +17,7 @@ import {
 
 import ImagePicker from 'react-native-image-picker';
 
-export default class MyImagePicker extends React.Component {
+class MyImagePicker extends React.Component {
 
 
   constructor(props) {

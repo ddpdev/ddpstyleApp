@@ -1,11 +1,10 @@
 /**
  * Created by ms.kim2 on 2016-07-14.
  */
-
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native';
 
-import {NativeModules} from 'react-native';
+import {NativeModules, Dimensions} from 'react-native';
 var ImagePicker = NativeModules.ImageCropPicker;
 
 const styles = StyleSheet.create({
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class CameraCropPicker extends Component {
+export default class CameraRollPicker extends Component {
 
   constructor() {
     super();
@@ -68,9 +67,8 @@ export default class CameraCropPicker extends Component {
 
   render() {
     return <View style={styles.container}>
-
       <ScrollView>
-        {this.state.image ? <Image style={{width: this.state.image.width, height: this.state.image.height}} source={this.state.image} /> : null}
+        {this.state.image ? <Image style={{width: 300, height: 300, resizeMode: 'contain'}} source={this.state.image} /> : null}
         {this.state.images ? this.state.images.map(i => <Image key={i.uri} style={{width: 300, height: this.scaledHeight(i.width, i.height, 300)}} source={i} />) : null}
       </ScrollView>
 

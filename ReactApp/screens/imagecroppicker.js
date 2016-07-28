@@ -6,9 +6,8 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native';
 
-// import {NativeModules} from 'react-native';
-// var ImagePicker = NativeModules.ImageCropPicker;
-import ImageCropPicker from 'react-native-image-crop-picker';
+import {NativeModules, Dimensions} from 'react-native';
+var ImagePicker = NativeModules.ImageCropPicker;
 
 const styles = StyleSheet.create({
   container: {
@@ -28,13 +27,6 @@ const styles = StyleSheet.create({
 
 class MyImageCropPicker extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     image: null,
-  //     images: null
-  //   };
-  // }
   constructor() {
     super();
     this.state = {
@@ -44,7 +36,7 @@ class MyImageCropPicker extends Component {
   }
 
   pickSingle(cropit) {
-    ImageCropPicker.openPicker({
+    ImagePicker.openPicker({
       width: 300,
       height: 300,
       cropping: cropit
@@ -58,7 +50,7 @@ class MyImageCropPicker extends Component {
   }
 
   pickMultiple() {
-    ImageCropPicker.openPicker({
+    ImagePicker.openPicker({
       multiple: true
     }).then(images => {
       this.setState({
@@ -77,9 +69,8 @@ class MyImageCropPicker extends Component {
 
   render() {
     return <View style={styles.container}>
-
       <ScrollView>
-        {this.state.image ? <Image style={{width: this.state.image.width, height: this.state.image.height}} source={this.state.image} /> : null}
+        {this.state.image ? <Image style={{width: 300, height: 300, resizeMode: 'contain'}} source={this.state.image} /> : null}
         {this.state.images ? this.state.images.map(i => <Image key={i.uri} style={{width: 300, height: this.scaledHeight(i.width, i.height, 300)}} source={i} />) : null}
       </ScrollView>
 

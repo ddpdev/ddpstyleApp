@@ -88,7 +88,7 @@ android {
 
     defaultConfig {
         applicationId "com.ddpapp10"
-        minSdkVersion 16
+        minSdkVersion 18
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -129,7 +129,8 @@ dependencies {
     compile project(':react-native-vector-icons')           // Icon module
     compile project(':react-native-camera')                 // camera module from github@
     compile project(':react-native-image-picker')           // Image Picker
-    //compile project(':react-native-image-crop-picker')      // image crop picker
+    compile project(':react-native-image-crop-picker')      // image crop picker
+    compile 'com.yalantis:ucrop:1.5.0'                      // image crop picker dependency
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"             // From node_modules

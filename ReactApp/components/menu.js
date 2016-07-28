@@ -29,7 +29,7 @@ import MyWebView from '../screens/mywebview'
 import MyUploadWebView from '../screens/myuploadwebview'
 //import Soon2 from '../screens/soon2'
 //import PhotoBrowser from '../screens/photobrowser'
-//import ImageCropPicker from '../screens/imagecroppicker'
+import ImageCropPicker from '../screens/imagecroppicker'
 import ImagePicker from '../screens/imagepicker'
 import ItemListView from '../screens/itemlistview'
 
@@ -48,10 +48,10 @@ class Menu extends Component {
         {title: 'WebView-Thumb', component: MyWebView},
         {title: 'WebView-Upload', component: MyUploadWebView},
         {title: 'ImagePicker', component: ImagePicker},
+        {title: 'ImageCropPicker', component: ImageCropPicker},
         {title: 'My Camera', component: Camera},
         {title: 'Forms', component: FormExample},
         {title: 'Style Guide', component: StyleGuide},
-        /*{title: 'ImageCropPicker', component: ImageCropPicker},*/
         /*{title: '테스트-화면', component: Soon2},*/
         /*{title: 'Photo Browser', component: PhotoBrowser},*/
       ],

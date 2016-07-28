@@ -9,10 +9,11 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 
-import com.oblador.vectoricons.VectorIconsPackage;
+import com.reactnative.picker.PickerPackage;    // image crop picker
+import com.imagepicker.ImagePickerPackage;      // image picker
+
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
-import com.imagepicker.ImagePickerPackage;     // image picker
-//import com.reactnative.picker.PickerPackage;    // image crop picker
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
-            //new PickerPackage(),
+            new PickerPackage(),
             new ImagePickerPackage(),
             new RCTCameraPackage(),
             new VectorIconsPackage()
